@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Koover2021</string>
+    <string name="user_full_name">Nombre Apellido</string>
+    <string name="user_address">Dirección</string>
+    <string name="phone">Teléfono</string>
+    <string name="nickname">Admin</string>
+    <string name="user_mail">Mail</string>
+    <string name="btn_update">Actualizar</string>
+    <string name="hello">Hola</string>
+    <string name="texto">Excelente servicio Muy recomendable</string>
+    <string name="title_activity_perfil">Perfil</string>
+</resources>

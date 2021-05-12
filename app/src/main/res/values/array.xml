@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="id_activityScreenTitles">
+
+        <item></item>
+        <item>DashBoard</item>
+        <item>Mi Perfil</item>
+        <item>Kooveters Cercanos</item>
+        <item>Configuraciones</item>
+        <item>Sobre nosotros</item>
+        <item/>
+        <item>Cerrar sesión</item>
+    </string-array>
+
+    <array name="id_activityScreenIcons">
+
+        <item>@drawable/close_iconk</item>
+        <item>@drawable/ic_outline_home_24</item>
+        <item>@drawable/my_profile_iconk</item>
+        <item>@drawable/kooveter_icon</item>
+        <item>@drawable/setting_iconk</item>
+        <item>@drawable/about_iconk</item>
+        <item>0</item>
+        <item>@drawable/logout_iconk</item>
+
+    </array>
+
+</resources>

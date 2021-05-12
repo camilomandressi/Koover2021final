@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:id="@+id/detallePago"
+    tools:context=".DetallePago">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="250dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="50dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/res_bg"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Detalle de transacción"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ref de pago:"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/txtId"
+        android:textStyle="bold"
+        android:text="ID de pago"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Importe Abonado:"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+        android:id="@+id/txtImporte"
+        android:textStyle="bold"
+        android:text="Importe abonado"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado del pago:"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:textStyle="bold"
+            android:text="Estado del pago"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSeguimiento"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/res_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Iniciar seguimiento"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            />
+
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Finalizar"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

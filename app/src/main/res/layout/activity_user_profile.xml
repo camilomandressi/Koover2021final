@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbFlechaAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:tint="@color/white"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:scaleType="center"
+        android:scaleX=".8"
+        android:scaleY=".8"
+        android:elevation="5dp"/>
+
+
+<!--     Fondo verde de foto y nickname-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFondoVerde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:padding="20dp"
+                android:background="@color/colorPrimaryDark" >
+                <!-- Foto del Usuario-->
+
+                <!--Nick del Usuario-->
+                <ImageView
+                    android:id="@+id/ivUserProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/inverse_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/clFondoVerde"
+                    android:layout_marginTop="30dp"
+                    android:elevation="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvUserNickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/clFondoVerde"
+                    app:layout_constraintEnd_toEndOf="@id/clFondoVerde"
+                    app:layout_constraintTop_toBottomOf="@id/ivUserProfile"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/nickname"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Caja que contiene los campos de datos-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCajaTextos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/clFondoVerde"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:padding="15dp">
+
+                <!-- NOMBRE Y APELLIDO campo editText con ícono izq -->
+
+                <TextView
+                    android:id="@+id/etUserFullName"
+                    android:text="Texto directo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:drawableTint="@color/colorPrimaryLight"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"
+                    />
+
+
+ <!--                TELEFONO campo editText con ícono izq -->
+                <TextView
+                    android:id="@+id/etUserPhone"
+                    android:text="@string/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/etUserFullName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:padding="15dp"
+                    android:drawableStart="@drawable/ic_baseline_phone_24"
+                    android:drawableTint="@color/colorPrimaryLight"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"/>
+
+
+ <!--              CORREO ELECTRÓNICO campo editText con ícono izq -->
+                <TextView
+                    android:id="@+id/etUserMail"
+                    android:text="@string/user_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/etUserPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:padding="15dp"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawableTint="@color/colorPrimaryLight"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"/>
+
+<!--              DIRECCION campo editText con ícono izq -->
+                <TextView
+                    android:id="@+id/etUserAddress"
+                    android:text="@string/user_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/etUserMail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:padding="15dp"
+                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                    android:drawableTint="@color/colorPrimaryLight"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_dark"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:text="Editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clCajaTextos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/res_bg"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:elevation="10dp"/>
+
+    <Button
+        android:id="@+id/btnMetodosPagos"
+        android:text="Métodos de pago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_editar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/res_bg"
+        android:backgroundTint="@color/gray_dark"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:elevation="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

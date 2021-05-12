@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileEdit">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--     Fondo verde de foto y nickname-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFondoVerde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="20dp"
+        android:background="@color/gray_light"               >
+
+
+ <!--                Foto del Usuario-->
+
+        <!--                Nick del Usuario-->
+        <ImageView
+            android:id="@+id/ivUserProfilePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/inverse_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/clFondoVerde"
+            android:layout_marginTop="30dp"
+            android:elevation="15dp" />
+
+        <EditText
+            android:id="@+id/etUserNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/clFondoVerde"
+            app:layout_constraintEnd_toEndOf="@id/clFondoVerde"
+            app:layout_constraintTop_toBottomOf="@id/ivUserProfilePicture"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="20dp"
+            android:hint="@string/nickname"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
+
+
+
+ <!--            boton flotante  con flecha-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCameraBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/ivUserProfilePicture"
+            app:layout_constraintEnd_toEndOf="@id/ivUserProfilePicture"
+            android:translationX="10dp"
+            android:translationY="10dp"
+            android:layout_marginBottom="-25dp"
+            android:background="@color/gray_dark"
+            android:elevation="15dp"
+            android:src="@drawable/ic_baseline_photo_camera_24"
+            android:scaleY=".8"
+            android:scaleX=".8"
+            android:backgroundTint="@color/gray_dark"
+            android:tint="@color/white"
+            app:elevation="15dp"
+           />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--Caja contenedora de campos de datos -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCajaTextos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clFondoVerde"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:padding="15dp">
+
+        <!--                NOMBRE Y APELLIDO campo editText con ícono izq -->
+
+        <EditText
+            android:id="@+id/etUserFullName"
+            android:hint="@string/user_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawableTint="@color/colorPrimaryLight"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:textSize="18sp"
+            android:textColor="@color/gray_dark"
+            />
+
+
+        <!--                TELEFONO campo editText con ícono izq -->
+        <EditText
+            android:id="@+id/etUserPhone"
+            android:hint="@string/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etUserFullName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="15dp"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawableTint="@color/colorPrimaryLight"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:textColor="@color/gray_dark"/>
+
+
+        <!--              CORREO ELECTRÓNICO campo editText con ícono izq -->
+        <EditText
+            android:id="@+id/etUserMail"
+            android:hint="@string/user_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etUserPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableTint="@color/colorPrimaryLight"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:textColor="@color/gray_dark"/>
+
+        <!--              DIRECCION campo editText con ícono izq -->
+        <EditText
+            android:id="@+id/etUserAddress"
+            android:hint="@string/user_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etUserMail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="15dp"
+            android:drawableStart="@drawable/ic_baseline_location_on_24"
+            android:drawableTint="@color/colorPrimaryLight"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:textColor="@color/gray_dark"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    Caja contenedora de botones-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clCajaTextos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="15dp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:text="Cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_guardar"
+            android:paddingHorizontal="50dp"
+            android:background="@drawable/res_bg"
+            android:backgroundTint="@color/colorAccent"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_guardar"
+            android:text="Guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_cancel"
+            android:paddingHorizontal="50dp"
+            android:background="@drawable/res_bg"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:elevation="10dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

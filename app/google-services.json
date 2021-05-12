@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "847065500554",
+    "project_id": "koover2021",
+    "storage_bucket": "koover2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847065500554:android:718ce2a5902e00700ad673",
+        "android_client_info": {
+          "package_name": "koover.com.koover2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847065500554-2e11iqm1sha4fl8feas64in71rikeh2b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrmapvMAayw46OAJUEdiq0nvcvnOfdb8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847065500554-2e11iqm1sha4fl8feas64in71rikeh2b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
